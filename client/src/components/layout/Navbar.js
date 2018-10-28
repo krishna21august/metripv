@@ -60,54 +60,92 @@ class Navbar extends Component {
       </ul>
     );
     return (
-      <nav className="navbar navbar-default navbar-fixed-top">
-        <div className="container">
-          <div className="navbar-header">
-            <button
-              type="button"
-              className="navbar-toggle"
-              data-toggle="collapse"
-              data-target="#myNavbar"
+      <div>
+        <nav className="navbar navbar-default navbar-fixed-top">
+          <div className="container">
+            <div className="navbar-header">
+              <button
+                type="button"
+                className="navbar-toggle"
+                data-toggle="collapse"
+                data-target="#myNavbar"
+              >
+                Menu
+              </button>
+              <Link className="navbar-brand" to="#myPage">
+                <img
+                  src={require("../../img/logo.png")}
+                  alt="logo"
+                  className="img-responsive"
+                />
+              </Link>
+            </div>
+            <div className="collapse navbar-collapse" id="myNavbar">
+              <ul className="nav navbar-nav navbar-right">
+                <li className="active">
+                  <Link to="#">HOME</Link>
+                </li>
+                <li>
+                  <Link to="#">ABOUT US</Link>
+                </li>
+                <li>
+                  <Link to="#">SUCESS STORIES</Link>
+                </li>
+                <li>
+                  <Link to="#">CONTACT US</Link>
+                </li>
+                <li>
+                  <Link to="#">
+                    <span
+                      className="btn btn-bg theme_bg"
+                      data-toggle="modal"
+                      data-target=".bs-modal-sm"
+                    >
+                      LOGIN
+                    </span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <header className="masthead d-flex">
+          <div className="container text-center bnr-dtl">
+            {/* <h1 className=" bnr-head" >We bring people together.<br>
+            <span className="typewrite" data-period="1000" data-type='[ "We bring people together.", "Love unites them...", "Mayank singh", "Prashant Bhatt" ]'></span>
+            <span className="wrap"></span>
+          </h1> */}
+            <a
+              className="btn btn-line btn-lg "
+              href="#"
+              data-toggle="modal"
+              data-target=".bs-modal-sm"
             >
-              Menu
-            </button>
-            <Link className="navbar-brand" to="#myPage">
-              <img
-                src={require("../../img/logo.png")}
-                alt="logo"
-                className="img-responsive"
-              />
-            </Link>
+              Get Started
+            </a>
           </div>
-          <div className="collapse navbar-collapse" id="myNavbar">
-            <ul className="nav navbar-nav navbar-right">
-              <li className="active">
-                <Link to="#">HOME</Link>
-              </li>
-              <li>
-                <Link to="#">ABOUT US</Link>
-              </li>
-              <li>
-                <Link to="#">SUCESS STORIES</Link>
-              </li>
-              <li>
-                <Link to="#">CONTACT US</Link>
-              </li>
-              <li>
-                <Link to="#">
-                  <span
-                    className="btn btn-bg theme_bg"
-                    data-toggle="modal"
-                    data-target=".bs-modal-sm"
-                  >
-                    LOGIN
-                  </span>
-                </Link>
-              </li>
-            </ul>
+          <div className="overlay" />
+          <div className="clearfix" />
+          <div className="bnr_footer">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 bdr_rht">
+                  50+ Languages
+                </div>
+                <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 bdr_rht">
+                  50+ Languages
+                </div>
+                <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 bdr_rht">
+                  50+ Languages
+                </div>
+                <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                  50+ Languages
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </nav>
+        </header>
+      </div>
     );
   }
 }
