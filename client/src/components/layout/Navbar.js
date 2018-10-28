@@ -60,7 +60,7 @@ class Navbar extends Component {
       </ul>
     );
     return (
-      <div className="Landing">
+      <div className="Landing" id="index">
         <nav className="navbar navbar-default navbar-fixed-top">
           <div className="container">
             <div className="navbar-header">
