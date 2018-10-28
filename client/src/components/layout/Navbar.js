@@ -60,30 +60,51 @@ class Navbar extends Component {
       </ul>
     );
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
+      <nav className="navbar navbar-default navbar-fixed-top">
         <div className="container">
-          <Link className="navbar-brand" to="/">
-            DevConnector
-          </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#mobile-nav"
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
-
-          <div className="collapse navbar-collapse" id="mobile-nav">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to="/profiles">
-                  {" "}
-                  Developers
+          <div className="navbar-header">
+            <button
+              type="button"
+              className="navbar-toggle"
+              data-toggle="collapse"
+              data-target="#myNavbar"
+            >
+              Menu
+            </button>
+            <Link className="navbar-brand" to="#myPage">
+              <img
+                src={require("../../img/logo.png")}
+                alt="logo"
+                className="img-responsive"
+              />
+            </Link>
+          </div>
+          <div className="collapse navbar-collapse" id="myNavbar">
+            <ul className="nav navbar-nav navbar-right">
+              <li className="active">
+                <Link to="#">HOME</Link>
+              </li>
+              <li>
+                <Link to="#">ABOUT US</Link>
+              </li>
+              <li>
+                <Link to="#">SUCESS STORIES</Link>
+              </li>
+              <li>
+                <Link to="#">CONTACT US</Link>
+              </li>
+              <li>
+                <Link to="#">
+                  <span
+                    className="btn btn-bg theme_bg"
+                    data-toggle="modal"
+                    data-target=".bs-modal-sm"
+                  >
+                    LOGIN
+                  </span>
                 </Link>
               </li>
             </ul>
-            {isAuthenticated ? authLinks : guestLinks}
           </div>
         </div>
       </nav>

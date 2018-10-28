@@ -24,27 +24,27 @@ import Post from "./components/post/Post";
 
 import "./App.css";
 
-//Check for token
-if (localStorage.jwtToken) {
-  //set auth token header
-  setAuthToken(localStorage.jwtToken);
+// //Check for token
+// if (localStorage.jwtToken) {
+//   //set auth token header
+//   setAuthToken(localStorage.jwtToken);
 
-  //decode token and get user info along with expiration of token
-  const decoded = jwt_decode(localStorage.jwtToken);
+//   //decode token and get user info along with expiration of token
+//   const decoded = jwt_decode(localStorage.jwtToken);
 
-  //Set user and is authenticated
-  store.dispatch(setCurrentUser(decoded));
+//   //Set user and is authenticated
+//   store.dispatch(setCurrentUser(decoded));
 
-  //Check for expired token
-  const currentTime = Date.now() / 1000;
-  if (decoded.exp < currentTime) {
-    //LogoutUser
-    store.dispatch(logoutUser());
-    store.dispatch(clearCurrentProfile());
+//   //Check for expired token
+//   const currentTime = Date.now() / 1000;
+//   if (decoded.exp < currentTime) {
+//     //LogoutUser
+//     store.dispatch(logoutUser());
+//     store.dispatch(clearCurrentProfile());
 
-    window.location.href = "/login";
-  }
-}
+//     window.location.href = "/login";
+//   }
+// }
 class App extends Component {
   render() {
     return (
