@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default () => {
   return (
     <div>
-      <section id="footer" class="section">
+      <section id="footer" className="section">
         <div className="container">
           <div className="row text-center text-xs-center text-sm-left text-md-left mr_b5">
             <div className="col-xs-4 col-sm-4 col-md-4">
