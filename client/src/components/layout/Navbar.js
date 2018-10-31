@@ -144,6 +144,209 @@ class Navbar extends Component {
               </div>
             </div>
           </div>
+          <div
+            aria-hidden="true"
+            aria-labelledby="mySmallModalLabel"
+            className="modal fade bs-modal-sm"
+            id="myModal"
+            role="dialog"
+            tabindex="-1"
+          >
+            <div className="modal-dialog modal-md">
+              <div className="modal-content">
+                <div className="modal-header theme_color">
+                  <button
+                    aria-hidden="true"
+                    className="close"
+                    data-dismiss="modal"
+                    style={{ color: "#ffffff", opacity: "1" }}
+                    type="button"
+                  >
+                    ×
+                  </button>
+                  <h4 className="modal-title" id="myModalLabel" />
+                  <img
+                    className="img-responsive"
+                    alt="logo"
+                    src={require("../../img/logo.png")}
+                  />
+                </div>
+                <div className="bs-example bs-example-tabs text-center">
+                  <ul className="nav nav-tabs" id="myTab">
+                    <li className="active col-xs-6 col-md-6 col-sm-6 col-lg-6 no-pad">
+                      <Link data-toggle="tab" to="#signin">
+                        Login
+                      </Link>
+                    </li>
+                    <li className=" col-xs-6 col-md-6 col-sm-6 col-lg-6 no-pad">
+                      <Link data-toggle="tab" to="#signup">
+                        Register
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className="modal-body">
+                  <div className="tab-content" id="myTabContent">
+                    <div className="tab-pane fade active in" id="signin">
+                      <form className="form-horizontal">
+                        <fieldset>
+                          <div className="control-group">
+                            <label className="control-label" htmlFor="userid">
+                              Email Id:
+                            </label>
+                            <div className="controls">
+                              <input
+                                className="input-medium"
+                                id="userid"
+                                name="userid"
+                                placeholder="Ex: rahul_123@gmail.com"
+                                required=""
+                                type="email"
+                              />
+                            </div>
+                          </div>
+                          <div className="control-group">
+                            <label
+                              className="control-label"
+                              htmlFor="passwordinput"
+                            >
+                              Password:
+                            </label>
+                            <div className="controls">
+                              <input
+                                className="input-medium"
+                                id="passwordinput"
+                                name="passwordinput"
+                                placeholder="********"
+                                required=""
+                                type="password"
+                              />
+                            </div>
+                          </div>
+                          <div className="row">
+                            <div className="col-md-12 text-right">
+                              <i>
+                                <Link to="#">Forgot Password?</Link>
+                              </i>
+                            </div>
+                          </div>
+                          <div className="control-group text-center">
+                            <label className="control-label" htmlFor="signin" />
+                            <div className="controls">
+                              <button
+                                className="btn btn-danger col-xs-12 col-md-12 col-sm-12 col-lg-12 btn-lg"
+                                id="signin"
+                                name="signin"
+                              >
+                                Login
+                              </button>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </form>
+                    </div>
+                    <div className="tab-pane fade" id="signup">
+                      <form className="form-horizontal">
+                        <fieldset>
+                          <div className="control-group">
+                            <label className="control-label" htmlFor="First">
+                              First Name:
+                            </label>
+                            <div className="controls">
+                              <input
+                                className="input-medium"
+                                id="First"
+                                name="First"
+                                placeholder="Eg: Rahul"
+                                required=""
+                                type="text"
+                              />
+                            </div>
+                          </div>
+                          <div className="control-group">
+                            <label className="control-label" htmlFor="Last">
+                              Last Name:
+                            </label>
+                            <div className="controls">
+                              <input
+                                className="input-medium"
+                                id="Last"
+                                name="Last"
+                                placeholder="Eg: Kumar"
+                                required=""
+                                type="text"
+                              />
+                            </div>
+                          </div>
+                          <div className="control-group">
+                            <label className="control-label" htmlFor="Email">
+                              Email:
+                            </label>
+                            <div className="controls">
+                              <input
+                                className="input-large"
+                                id="Email"
+                                name="Email"
+                                placeholder="Ex: rahul_123@gmail.com"
+                                required=""
+                                type="text"
+                              />
+                            </div>
+                          </div>
+                          <div className="control-group">
+                            <label className="control-label" htmlFor="Phone">
+                              Phone Number:
+                            </label>
+                            <div className="controls">
+                              <input
+                                className="input-large"
+                                id="Phone"
+                                name="Phone"
+                                placeholder="Eg: 0123456789"
+                                required=""
+                                type="text"
+                              />
+                            </div>
+                          </div>
+                          <div className="control-group">
+                            <label className="control-label" htmlFor="password">
+                              Password:
+                            </label>
+                            <div className="controls">
+                              <input
+                                className="input-large"
+                                id="password"
+                                name="password"
+                                placeholder="********"
+                                required=""
+                                type="password"
+                              />
+                              <em>1-8 Characters</em>
+                            </div>
+                          </div>
+                          <div className="control-group text-center">
+                            <label
+                              className="control-label"
+                              htmlFor="confirmsignup"
+                            />
+                            <div className="controls">
+                              <button
+                                className="btn btn-danger col-xs-12 col-md-12 col-sm-12 col-lg-12 btn-lg"
+                                id="confirmsignup"
+                                name="confirmsignup"
+                              >
+                                Sign Up
+                              </button>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </header>
       </div>
     );
